@@ -1,0 +1,226 @@
+
+/* from coolors.co
+/* CSV With # 
+    #1b065e, #ff47da, #ff87ab, #fcc8c2, #f5eccd
+/* Object {
+    "Federal blue":"1b065e",
+    "Purple pizzazz":"ff47da",
+    "Tickle me pink":"ff87ab",
+    "Tea rose (red)":"fcc8c2",
+    "Parchment":"f5eccd"
+
+    {"Pale Dogwood":"FED7CB",
+        "Rosy brown":"B28C97",
+        "Tea rose (red)":"E9BDC2",
+        "Raisin black":"342B2B",
+        "Peach":"FFE8BC",
+        "Lavender pink":"FEB6EB",
+        "Fairy Tale":"FEC4E1"}
+    #FED7CB, #B28C97, #E9BDC2, #342B2B, #FFE8BC, #FEB6EB, #FEC4E1
+
+}
+/* XML 
+<palette>
+  <color name="Federal blue" hex="1b065e" r="27" g="6" b="94" />
+  <color name="Purple pizzazz" hex="ff47da" r="255" g="71" b="218" />
+  <color name="Tickle me pink" hex="ff87ab" r="255" g="135" b="171" />
+  <color name="Tea rose (red)" hex="fcc8c2" r="252" g="200" b="194" />
+  <color name="Parchment" hex="f5eccd" r="245" g="236" b="205" />
+</palette>
+
+/* --- global --- *//*
+* {
+    border: 1px solid teal;
+}                  */
+
+:root {
+    --parchment: #f5eccd;
+    --tea-rose-og: #fcc8c2;
+    --tickle-me-pink: #ff87ab;
+    --purple-pizzazz: #ff47da;
+    --federal-blue: #1b065e;
+
+    --pale-dogwood: #fed7cb;
+    --rosy-brown: #b28c97;
+    --tea-rose: #e9bdc2;
+    --raisin-black: #342b2b;
+    --peach: #ffe8bc;
+    --lavender-pink: #feb6eb;
+    --fairy-tale: #fec4e1;
+    --deep-plum: rgb(135, 95, 132);
+    
+    --tea-rose-og-2: #fdd1cc;
+    --pale-dogwood-2: #ffe3da;
+}  
+
+body {
+    margin: 0;
+    font-family: 'Nunito sans', sans-serif;
+    text-align: center;
+    background-color: var(--pale-dogwood-2);
+    color: var(--raisin-black);
+}
+
+h1 {
+    text-align: center;
+    font-size: .5em;
+    color: transparent;
+}
+h2 {
+    padding-top: 20px;
+    padding-bottom: 30px;
+    font-family: 'Delicious Handrawn', sans-serif;
+    word-spacing: 2rem;
+    letter-spacing: .25rem;
+}
+h3 {
+    font-family: 'Delicious Handrawn';
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+h4 {
+    font-family: 'Delicious Handrawn', sans-serif;
+}
+
+img {
+    height: 200;
+    width: 250;
+}
+
+main {
+    min-height: 60vh;
+    flex-grow: 5;
+    padding-top: 100px;
+    padding-bottom: 30px;
+}
+  
+aside, nav {
+    background-color: var(--tea-rose-og-2);
+    flex-grow: 2;
+}
+nav li {
+    list-style-type: none;
+    text-align: left;
+    margin-left: 2em;
+    padding: 10px;
+}
+aside h3,
+nav h3 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.25em;
+}
+
+footer, header {
+    flex-grow: 1;
+    
+    font-family: 'Quicksand', sans-serif;
+    background-color: var(--tea-rose-og);
+}
+
+/* --- classes --- */
+.banner-bg {
+    background-color: var(--deep-plum);
+}
+.banner h2 {
+    background-color: white;
+    color: var(--raisin-black);
+}
+
+.banner img {
+    height: 300px;
+    width: 450px;
+    margin: auto;
+    padding-right: 25px;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.main2,
+.main3 {
+    padding: 10px;
+}
+.main1 p,
+.main4 p {
+    font-family: 'Quicksand', sans-serif;
+    padding: 15px;
+}
+.main4 {
+    padding-bottom: 3rem;
+}
+.welcome {
+    padding: 30px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+/*.product-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+p.top-right {
+
+}
+p.bottom-left {
+
+}*/
+.about {
+    padding: 1rem;
+}
+
+/*desktop styles*/
+@media (min-width: 600px) {
+    .container {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    main {
+        max-width: 500px;
+    }
+    header, footer {
+        width: 100%;
+    }
+    aside, nav {
+        padding-top: 150px;
+    }
+    .about {
+        max-width: 300px;
+        padding-left: 80px;
+    }
+    .banner img {
+        text-align: center;
+        width: 500px;
+    }
+    .grid {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        text-align: center;
+        max-height: 200px;
+        max-width: 600px;
+        align-items: center;
+        justify-content: space-around;
+        padding-left: 55;
+    }
+    .main1 {
+        padding-top: 2rem;
+    }
+    .main1,
+    .main4 {
+        flex: 2;
+        max-width: 300px;
+    }
+    .main2,
+    .main3 {
+        flex: 2;
+        max-width: 300px;
+        max-height: 300px;
+    }
+    .main4 {
+        padding-top: 3rem;
+    }
+}
